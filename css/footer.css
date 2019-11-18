@@ -1,0 +1,51 @@
+.footer-root-container {
+    width: 100vw;
+    overflow: hidden;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    /* position: fixed; */
+    z-index: 100000;
+}
+
+.footer-grid-container {
+    max-width: calc(1280px + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    /* padding-bottom: 3rem; */
+    width: 100%;
+}
+
+.inner-footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+.footer-lists {
+    list-style: none;
+}
+.footer-header-h4 {
+    margin-left: 0rem;
+}
+
+.footer-company, .footer-product, .footer-connect {
+    grid-column: span 2;
+    line-height: 20px;
+}
+.footer-logo {
+    grid-column: span 2;
+    line-height: 20px;
+    width: 7rem;
+}
+
+
+/* ========= MEDIA QUERY ========= */
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
+}
