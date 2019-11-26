@@ -1,0 +1,107 @@
+/* =========== REUSABLE UI CLASSES =========== */
+
+.gc-container {
+    max-width: calc(1280px + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.gc-field {
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    border: solid 1px rgba(149, 152, 154, 0.3);
+    padding: 0px 30px;
+}
+
+
+/* ================ BUTTONS ================= */
+.gc-button {
+    height: 45px;
+    padding: 0px 20px;
+    font-weight: bold;
+    width: 140px;
+}
+
+.gc-button-primary { 
+    background-color: #ef5350;
+    border: solid 2px #ef5350;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.gc-button-secondary { 
+    background-color: #fff;
+    border-color: #ef5350;
+    color: #ef5350;
+    border: solid 2px #ef5350;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+/* .button-small {
+    font-weight: bold;
+    width: 160px;
+    height: 40px;
+} */
+
+/* ============== BUTTON STATES ============== */
+.gc-button:hover {
+    background-color: #db4d4a;
+    border-color: #db4d4a;
+    color: #fff;
+}
+
+.button-small:hover {
+    background-color: #E37630;
+    border: solid 2px #E37630;
+    margin-left: 1rem;
+    color: #fff;
+}
+/* button a tag link */
+.button_link_root:hover {
+    border-bottom: 0px;
+}
+/* ================= IMAGES ================= */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ========== HEADING LINE DIVIDER ========== */
+.header_line_divider { 
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.gc-col {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0rem;
+}
+
+.gc-grid-2, .gc-grid-3, .gc-grid-4 {
+    display: flex;
+    margin: 0 -1rem;
+}
+
+.gc-grid-2 > .gc-col {
+    width: 50%;
+}
+
+.gc-grid-3 > .gc-col {
+    width: 33.33%;
+}
+
+.gc-grid-4 > .gc-col {
+    width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .gc-col {
+        width: 100%;
+    }
+}

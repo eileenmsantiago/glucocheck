@@ -1,0 +1,7 @@
+<svg id="logo_main" xmlns="http://www.w3.org/2000/svg" width="152" height="51" viewBox="0 0 152 51">
+  <g id="icon_blood_highlight" transform="translate(-163 -181.528)">
+    <path id="Path_50" data-name="Path 50" d="M7.827-88.6c.959,0,8.923,10.6,8.923,15.223A8.375,8.375,0,0,1,8.375-65,8.375,8.375,0,0,1,0-73.377C0-78,6.868-88.6,7.827-88.6Z" transform="translate(220 284)" fill="#e65f5f"/>
+    <path id="Path_92" data-name="Path 92" d="M3.917,1.41c.3,2.1.145,3.005-2.483,4.229S.4,5.3,1.4,4.356s1.2-.721,1.512-2.7S3.622-.687,3.917,1.41Z" transform="translate(230.341 209.558) rotate(14)" fill="#fff"/>
+  </g>
+  <text id="Gluc_Check" data-name="Gluc   Check" transform="translate(0 37)" fill="#e65f5f" font-size="28" font-family="PalanquinDark-Regular, Palanquin Dark"><tspan x="0" y="0" xml:space="preserve">Gluc   Check</tspan></text>
+</svg>
