@@ -1,0 +1,114 @@
+/* Index */
+
+.gc_container__hero {
+    min-height: 500px;
+    display: flex;
+    background-image: url("/glucocheck/assets/hero_img_container.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+
+.hero_content {
+    width: 50%;
+    margin-top: 5rem;
+}
+
+.hero_content h1 {
+    padding-bottom: 2rem;
+}
+
+.hero_content p {
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.gc_container__full .gc_container__form_center{ 
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.gc_container__three_cards .gc_container__two_full {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.gc_container__full {
+
+}
+.content_wrapper {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.gc-header, .gc-p {
+    /* padding-top: 1.5rem; */
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.gc_container__card_wrapper {
+    display: flex;
+}
+
+.gc_container__card_element {
+    padding: 1.5rem 1.5rem;
+}
+
+.gc_container__card_element h4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.gc_container__two_full {
+
+}
+
+/* ========= Register Section ========= */
+
+.gc_container_register {
+    margin: 1rem 23rem;
+    max-width: 40%;
+}
+.register-form {
+    margin-bottom: 150px;
+}
+
+form.register-form input[type=text], input[type=password] {
+    padding: 15px;
+    margin: 5px 0 22px 0px;
+    border-radius: 3px;
+    border: solid 1px rgba(149, 152, 154, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============ Responsive ============ */
+
+@media only screen and (max-width: 768px) {
+
+    .gc_container__card_element {
+        width: 100%;
+    }
+    .gc_container__card_wrapper {
+        flex-direction: column;
+    }
+
+    .gc_container__full {
+        width: 100%;
+    }
+    .content_wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .hero_content {
+        width: 100%;
+    }
+    .gc_container_register {
+        width: 100%;
+        margin: auto;
+        max-width: 100%;
+    }
+
+
+}

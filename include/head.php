@@ -4,11 +4,11 @@
 <meta name="keywords" content="blogs, articles, collaborative, readme, databases, webdesign, webdevelopment, html, php">
 <link rel="icon" href="/glucocheck/assets/logo_blood-small.ico">
 <link rel="authors" content="Eileen Santiago" href="#"/>
-<link rel="stylesheet" type="text/css" href="/glucocheck/css/reset.css">
-<link rel="stylesheet" type="text/css" href="/glucocheck/css/main.css">
-<link rel="stylesheet" type="text/css" href="/glucocheck/css/ui.css">
-<link rel="stylesheet" type="text/css" href="/glucocheck/css/header.css">
-<link rel="stylesheet" type="text/css" href="/glucocheck/css/footer.css">
+<link rel="stylesheet" type="text/css" href="/glucocheck/css/global/reset.css">
+<link rel="stylesheet" type="text/css" href="/glucocheck/css/global/main.css">
+<link rel="stylesheet" type="text/css" href="/glucocheck/css/global/ui.css">
+<link rel="stylesheet" type="text/css" href="/glucocheck/css/components/header.css">
+<link rel="stylesheet" type="text/css" href="/glucocheck/css/components/footer.css">
 <!-- <link rel="stylesheet" media="screen and (max-width:480px)" href="main.css"/>
 <link rel="stylesheet" media="screen and (max-width:480px)" href="footer.css"/> -->
 

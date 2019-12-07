@@ -1,6 +1,6 @@
 /* =========== REUSABLE UI CLASSES =========== */
 
-.gc-container {
+.gc_container {
     max-width: calc(1280px + 4rem);
     margin-left: auto;
     margin-right: auto;
@@ -9,7 +9,7 @@
     padding-right: 3rem;
 }
 
-.gc-field {
+.gc_field {
     width: 100%;
     height: 45px;
     border-radius: 3px;
@@ -17,42 +17,48 @@
     padding: 0px 30px;
 }
 
-
 /* ================ BUTTONS ================= */
-.gc-button {
-    height: 45px;
-    padding: 0px 20px;
+.gc_button {
     font-weight: bold;
     width: 140px;
+    max-width: 100%;
+    align-items: center;
+    margin-top: auto;
+    height: 3rem;
+    padding: 1rem 1.7rem;
+    align-self: flex-start;
+    cursor: pointer
 }
 
-.gc-button-primary { 
+.gc_button-type-primary { 
     background-color: #ef5350;
     border: solid 2px #ef5350;
-    border-radius: 25px;
+    border-radius: 30px;
     color: #fff;
 }
 
-.gc-button-secondary { 
+.gc_button-type-secondary { 
     background-color: #fff;
     border-color: #ef5350;
     color: #ef5350;
     border: solid 2px #ef5350;
-    border-radius: 5px;
-    margin-left: 1rem;
+    border-radius: 30px;
 }
 
-/* .button-small {
-    font-weight: bold;
-    width: 160px;
-    height: 40px;
-} */
+.gc_button-content {
+    position: relative;
+}
 
 /* ============== BUTTON STATES ============== */
-.gc-button:hover {
+.gc_button-type-primary:hover {
     background-color: #db4d4a;
     border-color: #db4d4a;
     color: #fff;
+}
+.gc_button-type-secondary:hover {
+    background-color: #fff;
+    border-color: #db4d4a;
+    color: #db4d4a;
 }
 
 .button-small:hover {
@@ -61,10 +67,14 @@
     margin-left: 1rem;
     color: #fff;
 }
-/* button a tag link */
-.button_link_root:hover {
-    border-bottom: 0px;
-}
+
+/* ================= CARDS ================= */
+
+    /* transform: scale(1.01);
+    box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.16);
+    transition-timing-function: ease-out; */
+    /* transition: 0.50s; */
+
 /* ================= IMAGES ================= */
 img {
     max-width: 100%;
@@ -77,31 +87,31 @@ img {
     margin-bottom: 20px;
 }
 
-.gc-col {
+.gc_col {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 0rem;
 }
 
-.gc-grid-2, .gc-grid-3, .gc-grid-4 {
+.gc_grid-2, .gc_grid-3, .gc_grid-4 {
     display: flex;
     margin: 0 -1rem;
 }
 
-.gc-grid-2 > .gc-col {
+.gc_grid-2 > .gc_col {
     width: 50%;
 }
 
-.gc-grid-3 > .gc-col {
+.gc_grid-3 > .gc_col {
     width: 33.33%;
 }
 
-.gc-grid-4 > .gc-col {
+.gc_grid-4 > .gc_col {
     width: 25%;
 }
 
 @media only screen and (max-width: 768px) {
-    .gc-col {
+    .gc_col {
         width: 100%;
     }
 }

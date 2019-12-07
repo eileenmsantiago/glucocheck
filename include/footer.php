@@ -47,3 +47,5 @@
         </div>
     </div>
 </footer>
+
+<script src="/glucocheck/js/main.js"></script>

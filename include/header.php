@@ -1,5 +1,5 @@
 <header> 
-    <nav class="gc-container">
+    <nav class="gc_container">
         <a href="/glucocheck/index.php">
             <img
                 src="/glucocheck/assets/logo_main.svg"
@@ -9,15 +9,17 @@
         <div class="nav_list_wrapper">
             <ul class="nav_list">
                 <li>
-                    <a href="/glucocheck/about.php">HOW WE WORK</a>
+                    <a href="/glucocheck/about.php">How We Work</a>
                 </li>
                 <li>
-                    <a href="/glucocheck/login.php">LOG IN</a>
+                    <a href="/glucocheck/login.php">Log in</a>
                 </li>
                 <li>
-                    <a class="button_link_root" href="/glucocheck/login.php"> 
-                        <button class="gc-button gc-button-primary">GET STARTED
-                        </button>
+                    <a 
+                        class="gc_button gc_button-type-primary" 
+                        aria-label="nav button" 
+                        href="/glucocheck/signup.php">
+                            Get Started
                     </a>
                 </li>
             </ul>

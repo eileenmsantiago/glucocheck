@@ -1,0 +1,101 @@
+/*============ Main ============*/
+.wrapper {
+    margin: 10px 150px 72px 150px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    letter-spacing: 1px;
+  }
+  
+  /*============ Form Elements ============*/
+  form div { 
+    padding-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  #submitBtn {
+    display: inline-block;
+    color: white;
+    width: 80px;
+    height: 37.6px;
+    background-color: #ed8249;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* .form__container {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+    }
+    
+    .form__container label {
+      margin: 5px 10px 5px 0;
+    }
+    
+    .form__container input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    } */
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+  /*
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    */
+    /* Responsive layout - screen < 768px */ 
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    } 
