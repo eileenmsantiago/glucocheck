@@ -74,15 +74,6 @@
     margin-bottom: 150px;
 }
 
-form.register-form input[type=text], input[type=password] {
-    padding: 15px;
-    margin: 5px 0 22px 0px;
-    border-radius: 3px;
-    border: solid 1px rgba(149, 152, 154, 0.3);
-    width: 100%;
-    box-sizing: border-box;
-}
-
 /* ============ Responsive ============ */
 
 @media only screen and (max-width: 768px) {

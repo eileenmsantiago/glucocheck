@@ -1,0 +1,53 @@
+.bottombar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ef5350;
+    color: #fff; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.bottombar__content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottombar__content > * {
+    display: flex;
+    align-items: center;
+}
+
+.bottombar__text {
+    padding-right: 1rem;
+
+}
+
+.bottombar__close {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+#cookie_accept_btn {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#cookie_accept_btn {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+#cookie_revoke {
+    display: none;
+}

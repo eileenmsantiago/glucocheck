@@ -23,7 +23,7 @@
     width: 140px;
     max-width: 100%;
     align-items: center;
-    margin-top: auto;
+    /* margin-top: auto; */
     height: 3rem;
     padding: 1rem 1.7rem;
     align-self: flex-start;
@@ -76,10 +76,10 @@
     /* transition: 0.50s; */
 
 /* ================= IMAGES ================= */
-img {
+/* img {
     max-width: 100%;
     max-height: 100%;
-}
+} */
 
 /* ========== HEADING LINE DIVIDER ========== */
 .header_line_divider { 
@@ -109,6 +109,37 @@ img {
 .gc_grid-4 > .gc_col {
     width: 25%;
 }
+
+
+/* FORMS */
+
+form div { 
+    padding-bottom: 20px;
+    }
+    
+    input {
+    width: 100%;
+    }
+    
+    textarea {
+    width: 100%;
+    }
+    
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        border: solid 2px #1d1d1c;
+        background-color: #fafafa;
+        resize: vertical;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+
+/* RESPONSIVENESS */
 
 @media only screen and (max-width: 768px) {
     .gc_col {

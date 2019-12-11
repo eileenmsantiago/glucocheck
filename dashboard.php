@@ -3,27 +3,15 @@
 <head>
     <title>Home</title>
     <?php include("include/head.php"); ?>
-    <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/index.css">
-    <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/bottomBar.css">
+    <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/entryForms.css">
 </head>
 <body>
     <?php include("include/header.php");?>
     <main>
         <section class="gc_container__hero">
             <div class="gc_container">
-                <div class="hero_content">
-                    <h1>The place to track your diabetes data</h1> 
-                    <p> 
-                        With GlucoCheck, input your blood glucose levels, monitor and learn from them. 
-                    </p>
-                    <!-- <a class="button_link_root" href="/glucocheck/login.php"> </a> -->
-                    <a class="gc_button gc_button-type-primary" aria-label="hero button" href="/glucocheck/signup.php">
-                    Get Started
-                        <!-- <span class="gc_button-content">Get Started</span> -->
-                        <!-- <button class="gc_button gc_button-primary">GET STARTED
-                        </button> -->
-                    </a>
-                </div>
+                
             </div>
         </section>
         <section class="gc_container__full">
@@ -96,22 +84,7 @@
             </div>
         </section>
     </main>
-    <div class="bottombar" data-bottombar="cookieMessage">
-        <div class="bottombar__content">
-            <div id="cookie_accept" class="bottombar__text">
-                <p> We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-                <a id="cookie_accept_btn" class="gc_button gc_button-type-secondary">Accept</a>
-            </div>
-            <div id="cookie_revoke" class="bottombar__text">
-                <p> Cookies were accepted. Would you like to revoke?</p>
-                <a id="cookie_revoke_btn" class="gc_button gc_button-type-secondary">Yes</a>
-            </div>
-            <button type="button" class="bottombar__close" data-bottombar-close="cookieMessage">
-                &times;
-            </button>
-        </div>
-    </div>
     <?php include("include/footer.php") ?>
-    <script src="/glucocheck/js/index.js"></script>
+    <script src="/glucocheck/js/dashboard.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
                     <a href="/glucocheck/about.php">How We Work</a>
                 </li>
                 <li>
-                    <a href="/glucocheck/login.php">Log in</a>
+                    <a href="/glucocheck/signin.php">Sign In</a>
                 </li>
                 <li>
                     <a 
