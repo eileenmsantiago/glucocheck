@@ -6,4 +6,10 @@
     $dbpassword = "GA47Y0;U}?kQ";
 
     $pdo = new PDO($dsn, $dbusername, $dbpassword); 
+
+    try {
+        $dbh = new PDO($dsn, $dbusername, $dbpassword);
+    } catch (PDOException $e) {
+        echo 'Connection failed: ' . $e->getMessage();
+    }
 ?>

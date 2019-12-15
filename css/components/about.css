@@ -1,0 +1,31 @@
+.about-container {
+    /* padding-left: 15rem;
+    padding-right: 15rem; */
+}
+
+.about-main-content-container {
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.about-body-content-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.body-content {
+    padding-right: 480px;
+}
+.body-content-right {
+    padding-left: 480px;
+    text-align: right;
+}
+
+.content-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

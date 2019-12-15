@@ -9,7 +9,7 @@
     <?php include("include/header.php");?>
     <main>
         <section class="signup_form_wrapper">
-            <div class="gc_container">
+            <div class="gc-container">
                 <div class="signup_form_content_container">
                     <div class="signup_form_header">
                         <h2 class="gc-header">Profile</h2>
@@ -23,18 +23,6 @@
                             <div class="signup_form_header">
                                 <h3>Personal Health</h3>
                             </div>
-                            <!-- <label for="fname">First Name: </label><br>
-                            <input 
-                                type="text" 
-                                placeholder="Your first name" 
-                                name="fname" 
-                                required><br>
-                            <label for="fname">Last Name: </label><br>
-                            <input 
-                                type="text" 
-                                placeholder="Your last name" 
-                                name="lname" 
-                                required><br> -->
                             <label for="dob">Date of Birth: </label><br>
                             <input 
                                 type="date" 
@@ -90,7 +78,7 @@
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 name="doctorNumber" 
                                 required><br>
-                            <button type="submit" class="gc_button gc_button-type-secondary">Submit</button>
+                            <button type="submit" class="gc-button gc-button-type-secondary">Submit</button>
                         </form>
                     </div>
                 </div>

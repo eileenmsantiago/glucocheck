@@ -21,5 +21,5 @@
         placeholder="What's your question?" 
         name="contactQuestion" 
         required><br>
-    <button type="submit" class="gc_button gc_button-type-secondary">Submit</button>
+    <button type="submit" class="gc-button gc-button-type-secondary">Submit</button>
 </form>

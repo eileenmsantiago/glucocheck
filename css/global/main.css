@@ -16,7 +16,7 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* ======= FONTS (a, p, headers, etc.) ======= */
@@ -43,7 +43,7 @@ p {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.35;
@@ -53,14 +53,16 @@ h1, h2, h3, h4, h5 {
 }
 h1 {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 h4 {
@@ -73,6 +75,11 @@ h5 {
     font-size: 0.8rem;
 }
 
+
+h3, h4, h5 {
+    margin-bottom: 1rem;
+
+}
 /* ============== LINK STATES ==============*/
 
 a:hover {

@@ -1,7 +1,9 @@
 /* =========== REUSABLE UI CLASSES =========== */
 
-.gc_container {
-    max-width: calc(1280px + 4rem);
+/* ====== Container/ wrapper/ fields ====== */
+
+.gc-container {
+    max-width: calc(1180px + 4rem);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -9,7 +11,7 @@
     padding-right: 3rem;
 }
 
-.gc_field {
+.gc-field {
     width: 100%;
     height: 45px;
     border-radius: 3px;
@@ -17,27 +19,48 @@
     padding: 0px 30px;
 }
 
+
+/* =============== Typography =============== */
+
+.gc-heading {
+    padding-bottom: 2rem;
+}
+
+.gc-text p{
+    margin-bottom: 1rem;
+}
+
+#gc-para-header {
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.gc-label-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
 /* ================ BUTTONS ================= */
-.gc_button {
+.gc-button {
     font-weight: bold;
     width: 140px;
     max-width: 100%;
     align-items: center;
     /* margin-top: auto; */
     height: 3rem;
-    padding: 1rem 1.7rem;
+    padding: 0.7rem 2rem;
     align-self: flex-start;
     cursor: pointer
 }
 
-.gc_button-type-primary { 
+.gc-button-type-primary { 
     background-color: #ef5350;
     border: solid 2px #ef5350;
     border-radius: 30px;
     color: #fff;
 }
 
-.gc_button-type-secondary { 
+.gc-button-type-secondary { 
     background-color: #fff;
     border-color: #ef5350;
     color: #ef5350;
@@ -45,17 +68,17 @@
     border-radius: 30px;
 }
 
-.gc_button-content {
+.gc-button-content {
     position: relative;
 }
 
 /* ============== BUTTON STATES ============== */
-.gc_button-type-primary:hover {
+.gc-button-type-primary:hover {
     background-color: #db4d4a;
     border-color: #db4d4a;
     color: #fff;
 }
-.gc_button-type-secondary:hover {
+.gc-button-type-secondary:hover {
     background-color: #fff;
     border-color: #db4d4a;
     color: #db4d4a;
@@ -82,67 +105,67 @@
 } */
 
 /* ========== HEADING LINE DIVIDER ========== */
-.header_line_divider { 
-    margin-top: 8px;
-    margin-bottom: 20px;
-}
 
-.gc_col {
+.gc-col {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 0rem;
 }
 
-.gc_grid-2, .gc_grid-3, .gc_grid-4 {
+.gc-grid-2, .gc-grid-3, .gc-grid-4 {
     display: flex;
     margin: 0 -1rem;
 }
 
-.gc_grid-2 > .gc_col {
+.gc-grid-2 > .gc-col {
     width: 50%;
 }
 
-.gc_grid-3 > .gc_col {
+.gc-grid-3 > .gc-col {
     width: 33.33%;
 }
 
-.gc_grid-4 > .gc_col {
+.gc-grid-4 > .gc-col {
     width: 25%;
 }
 
 
-/* FORMS */
+/* ============= FORMS ============= */
 
-form div { 
-    padding-bottom: 20px;
-    }
-    
-    input {
+input {
     width: 100%;
-    }
-    
-    textarea {
-    width: 100%;
-    }
-    
-    input[type=text], select, textarea {
-        width: 100%;
-        padding: 12px;
-        border-radius: 5px;
-        border: solid 2px #1d1d1c;
-        background-color: #fafafa;
-        resize: vertical;
-    }
-    
-    label {
-        padding: 12px 12px 12px 0;
-        display: inline-block;
-    }
+}
 
-/* RESPONSIVENESS */
+textarea {
+    width: 100%;
+}
+
+input[type=text], input[type=date], input[type=password], select, textarea {
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 2px #1d1d1c;
+    background-color: #f6f6f6;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #1d1d1c;
+}
+
+input[type=text]:focus {
+    outline: 0;
+    border-color: #db4d4a;
+    background-color: #f6f6f6;
+}
+
+
+/* ============= RESPONSIVENESS ============= */
 
 @media only screen and (max-width: 768px) {
-    .gc_col {
+    .gc-col {
         width: 100%;
     }
 }

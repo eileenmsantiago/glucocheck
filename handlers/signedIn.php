@@ -19,8 +19,7 @@
 ?>
 
 <?php if ($row): 
-    // header("Location:dashboard.php");
-    header("Location:index.php");
+    header("Location:../dashboard.php");
 ?>
    
 <?php endif; ?>

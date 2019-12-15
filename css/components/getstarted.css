@@ -36,7 +36,7 @@
     border-radius: 5px;
   }
   
-  /* .form__container {
+  /* .form--container {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
@@ -47,11 +47,11 @@
       margin-bottom: 8rem;
     }
     
-    .form__container label {
+    .form--container label {
       margin: 5px 10px 5px 0;
     }
     
-    .form__container input {
+    .form--container input {
       width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
