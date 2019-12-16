@@ -13,5 +13,5 @@
     
     $stmt->execute(array(':level' => $level, ':beforeAfter' => $beforeAfter, ':time' => $time, ':date' => $date));
     
-    header("Location:/glucocheck/dashboard.php");
+    // header("Location:/glucocheck/dashboard.php");
 ?>

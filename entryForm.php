@@ -42,7 +42,7 @@
             <section class="dashboard-container dashboard--entry-form">
                 <div class="form-content-wrapper">
                     <form 
-                        action="handlers/updateBG.php" 
+                        action="handlers/updateBG.php?id=<?php echo $bgID?>" 
                         method="POST"
                         enctype="multipart/form-data"
                         id="bg-form">
@@ -58,9 +58,18 @@
                         <div class="form-label-container">
                             <label class="gc-label-header" for="beforeAfter">Before/After </label>
                                 <select name="beforeAfter" id="beforeAfter">
-                                    <option value="beforeAfter">--</option>
-                                    <option value="before">Before</option>
-                                    <option value="after">After</option>
+                                    <option 
+                                        value="before"
+                                        <?php if($row["beforeAfter"] == 'before') echo 'selected'; ?>
+                                    >
+                                        Before
+                                    </option>
+                                    <option
+                                        value="after"
+                                        <?php if($row["beforeAfter"] == 'after') echo 'selected'; ?>
+                                    >
+                                        After
+                                    </option>
                                 </select> 
                         </div>
                         <div class="form-label-container">
