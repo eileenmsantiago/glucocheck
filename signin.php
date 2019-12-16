@@ -28,6 +28,7 @@
                             required><br>
                         <label for="password">Password: </label><br>
                         <input 
+                            class="input-bottom"
                             type="password" 
                             placeholder="Your password" 
                             name="password" 
@@ -36,6 +37,9 @@
                         <button type="submit" id ="submit" class="gc-button gc-button-type-secondary">Sign In</button>
                     </form>
                 </div>
+            </div>
+            <div class="sign-image-container">
+                <img src="assets/container-signup.svg">
             </div>
         </section>
     </main>

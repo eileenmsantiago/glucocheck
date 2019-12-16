@@ -8,19 +8,19 @@
 <body>
     <?php include("include/header.php");?>
     <main>
-        <section class="signup_form_wrapper">
+        <section class="form-wrapper">
             <div class="gc-container">
-                <div class="signup_form_content_container">
-                    <div class="signup_form_header">
-                        <h2 class="gc-header">Profile</h2>
+                <div class="form-content-container">
+                    <div class="signup-form-header">
+                        <h1 class="gc-header">Profile</h1>
                         <p class="gc-p">Complete your GlucoCheck Profile to get started</p>
                     </div>
-                    <div class="signup_form_content">
+                    <div class="form-content">
                         <form 
                             method="POST"
                             enctype="multipart/form-data"
                             class="register-form">
-                            <div class="signup_form_header">
+                            <div class="signup-form-header">
                                 <h3>Personal Health</h3>
                             </div>
                             <label for="dob">Date of Birth: </label><br>
@@ -58,11 +58,12 @@
                                 </select> <br>
                             <label for="medication">Medication for diabetes: </label><br>
                             <input 
+                                class="input-bottom"
                                 type="text" 
                                 placeholder="Medication(s) for your type of diabetes" 
                                 name="medication" 
                                 required><br>
-                            <div class="signup_form_header">
+                            <div class="signup-form-header">
                                 <h3>Doctor's Information</h3>
                             </div>
                             <label for="doctorName">Name of Endocrinologist/ Family Physician: </label><br>
@@ -73,6 +74,7 @@
                                 required><br>
                             <label for="doctorNumber">Endocrinologist/ Family Physician's contact number </label><br>
                             <input 
+                                class="input-bottom"
                                 type="text" 
                                 placeholder="+1" 
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"

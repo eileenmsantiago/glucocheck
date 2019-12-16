@@ -12,12 +12,10 @@
             <div class="form-content-container">
                 <div class="form-header">
                     <h2 class="gc-header">Start tracking your blood glucose levels</h2>
-                    <p class="gc-p">A simplified way to visually see your glucose trends and share with your doctor</p>
+                    <p class="gc-text">A simplified way to visually see your glucose trends and share with your doctor</p>
                 </div>
                 <div class="user-input-container">
-                    <form 
-                        class="register-form"
-                    >
+                    <form class="register-form">
                         <label for="fname">First Name: </label><br>
                         <input 
                             type="text" 
@@ -38,6 +36,7 @@
                             required><br>
                         <label for="password">Password: </label><br>
                         <input 
+                            class="input-bottom"
                             type="password" 
                             placeholder="Your password" 
                             name="password" 
@@ -50,13 +49,16 @@
                     </form>
                 </div>
             </div>
-            <!-- Confirmation Modal -->
+            <!-- Sign up Confirmation Modal -->
             <div id="modal" class="modal"> 
                 <div class="modal-box">
                     <span id="closeModal">&times;</span>
                     <p id="confirmText"></p>
                     <button id="confirmationBtn"></button>
                 </div>
+            </div>
+            <div class="sign-image-container">
+                <img src="assets/full-signup.svg">
             </div>
         </section>
     </main>

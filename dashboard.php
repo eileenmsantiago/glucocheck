@@ -1,7 +1,7 @@
-<?php 
-
-    // dashboard.php
-
+<?php session_start();
+    
+    include("include/isUser.php");
+    include("include/isLoggedIn.php");
     include("include/connect.php");
     
     // Receives the blood glucose levels ('level') from the 'bg' table
@@ -38,21 +38,17 @@
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/dashboard.css">
     <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/dataTable.css">
-    <link rel="stylesheet" type="text/css" href="/glucocheck/css/components/entryForms.css">
 </head>
 <body>
-    <?php 
-        include("include/header.php");
-        // foreach($userDetails as $userInfo);
-    ?>
+    <?php include("include/header.php");?>
     <main>
         <div class="gc-container">
             <section class="dashboard--header">
                 <h1 class="gc-header">Hi, <?php echo $userDetails["fname"]; ?></h1>
-                <h2 id="header-dashboard">Dashboard</h2>
+                <a class="header-dashboard-link" href="dashboard.php"><h2 class="header-dashboard-text">Dashboard</h2></a>
             </section>
             <section class="dashboard-container dashboard--entry-form">
-                <div class="entry-form--content_wrapper">
+                <div class="form-content-wrapper">
                     <h2 class="gc-header">New BG Entry</h2>
                     <form 
                         action="handlers/addBgEntry.php" 
@@ -68,7 +64,7 @@
                                 required>
                         </div>
                         <div class="form-label-container">
-                            <label class="gc-label-header" for="beforeAfter">Before or after meal </label>
+                            <label class="gc-label-header" for="beforeAfter">Before/After </label>
                                 <select name="beforeAfter" id="beforeAfter">
                                     <option value="beforeAfter">--</option>
                                     <option value="before">Before</option>
@@ -96,77 +92,45 @@
                 </div>
             </section>
             <section class="dashboard-container dashboard--entry-latest">
-                <h2 class="gc-header">Latest Entries</h2>
+                <div class="dashboard-entry-header">
+                    <h2 class="gc-header">Latest Entries</h2>
+                </div>
+
                 <table id="data-table--entry-latest">
-                        <thead>
-                            <tr>
-                                <th class="gc-label-header" scope="col">BG Level</th>
-                                <th class="gc-label-header" scope="col">Range</th>
-                                <th class="gc-label-header" scope="col">Before/After</th>
-                                <th class="gc-label-header" scope="col">Time</th>
-                                <th class="gc-label-header" scope="col">Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row"><?php echo $userBgInfo["level"]; ?></td>
-                                <td scope="row">
-                                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
-                                </td>
-                                <td scope="row"><?php echo $userBgInfo["beforeAfter"]; ?></td>
-                                <td scope="row"><?php echo $userBgInfo["time"]; ?></td>
-                                <td scope="row"><?php echo $userBgInfo["date"]; ?></td>
-                            </tr>
-                        </tbody>
+                    <thead>
+                        <tr>
+                            <th class="gc-label-header" scope="col">BG Level</th>
+                            <th class="gc-label-header" scope="col">Range</th>
+                            <th class="gc-label-header" scope="col">Before/After</th>
+                            <th class="gc-label-header" scope="col">Time</th>
+                            <th class="gc-label-header" scope="col">Date</th>
+                            <th class="gc-label-header" scope="col">Setting</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bg-body">
 
-
-
-
-
-
-                        
-                        <?php 
-                            // foreach($userBg as $userBgInfo): 
-                            // set a limit of 3 entries
-                            $i=0;
-                            foreach($userBg as $userBgInfo): if ($i < 3) {
-                            
-                            $i +=1;
-                            }    
-                        ?>
-                            <tr>
-                                <td scope="row"><?php echo $userBgInfo["level"]; ?></td>
-                                <td scope="row">
-                                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
-                                </td>
-                                <td scope="row"><?php echo $userBgInfo["beforeAfter"]; ?></td>
-                                <td scope="row"><?php echo $userBgInfo["time"]; ?></td>
-                                <td scope="row"><?php echo $userBgInfo["date"]; ?></td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; ?>
-                    </table>
+                </table>
             </section>
             <section class="dashboard--4-col">
                 <div class="dashboard-container bg--col" id="currentBg">
                     <h3 class="gc-header">Current BG</h3>
-                    <p class="bg-level--p"><?php echo $userBgInfo["level"]; ?> mmol/L</p>
-                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
+                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="averageBg">
                     <h3 class="gc-header">Average BG</h3>
-                    <p class="bg-level--p"><?php echo $userBgInfo["level"]; ?> mmol/L</p>
-                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
+                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="highestBg">
                     <h3 class="gc-header">Highest BG</h3>
-                    <p class="bg-level--p"><?php echo $userBgInfo["level"]; ?> mmol/L</p>
-                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
+                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="lowestBg">
                     <h3 class="gc-header">Lowest BG</h3>
-                    <p class="bg-level--p"><?php echo $userBgInfo["level"]; ?> mmol/L</p>
-                    <div class="level-circle <?php echo $userBgInfo['statusColor']?>"></div>
+                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 
             </section>

@@ -31,12 +31,8 @@ window.onclick = function(e) {
     }
 }
 
-    
-
-
 function processSignup(e){
 
-    console.log('test');
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(e){     
         console.log('process')
@@ -48,7 +44,7 @@ function processSignup(e){
                 displayModal();
                 
                 var confirmText = document.getElementById("confirmText");
-                confirmText.innerHTML = "You've successfully signed up with GlucoCheck. ";
+                confirmText.innerHTML = "You've successfully signed up with GlucoCheck. Sign in now to get started with tracking your glucose levels!";
 
                 var confirmationBtn = document.getElementById("confirmationBtn");
                 confirmationBtn.setAttribute("onclick", "window.location.href = 'signin.php';");
@@ -62,18 +58,8 @@ function processSignup(e){
     var email = document.forms[0]["email"];
     var password = document.forms[0]["password"];
 
-    // console.log(nom.value, email.value, password.value);
-
     xhr.open("POST", "/glucocheck/handlers/addUser.php", true);
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
     xhr.send("fname="+fname.value+"&lname="+lname.value+"&email="+email.value+"&password="+password.value);
 };
 
-
-
-// var confirmText = document.getElementById("confirmText");
-// confirmText.innerHTML = "You've successfully signed up with GlucoCheck. ";
-
-// var confirmationBtn = document.getElementById("confirmationBtn");
-// confirmationBtn.setAttribute("onclick", "window.location.href = 'signin.php';");
-// confirmationBtn.innerHTML="Sign in";

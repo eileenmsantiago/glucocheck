@@ -17,17 +17,6 @@
     border-radius: 8px;
 }
 
-.dashboard--header {
-    display: flex;
-    align-items: center;
-}
-#header-dashboard {
-    margin-left: auto;
-    font-size: 1.3rem;
-    color: #ef5350;
-}
-
-
 table {
     width: 100%;
   }
@@ -87,3 +76,4 @@ td {
 .green {
     background-color: #4ec48e;
 }
+

@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="blogs, articles, collaborative, readme, databases, webdesign, webdevelopment, html, php">
+<meta name="keywords" content="diabetes management tracking glucose levels patient users doctors ">
 <link rel="icon" href="/glucocheck/assets/logo_blood-small.ico">
 <link rel="authors" content="Eileen Santiago" href="#"/>
 <link rel="stylesheet" type="text/css" href="/glucocheck/css/global/reset.css">
