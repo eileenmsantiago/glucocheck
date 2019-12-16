@@ -5,13 +5,11 @@
     
     $id = $_GET['id'];
 
-    echo $isLoggedIn;
     if(!$isLoggedIn) {
         header("Location:/glucocheck/index.php");
     } else {
 
         $stmt = $pdo->prepare("DELETE FROM `bg` WHERE `bg`.`id` = $id;");
-
         $stmt->execute();
 
         header("Location:/glucocheck/dashboard.php");

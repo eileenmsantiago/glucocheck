@@ -15,14 +15,10 @@
     if($row) {
         session_start();
         $_SESSION['id'] = $row['id'];
+        header("Location:/glucocheck/dashboard.php");
     }
 ?>
 
-<?php if ($row): 
-    header("Location:../dashboard.php");
-?>
-   
-<?php endif; ?>
 <?php if (!$row): ?>
     <p>There is no record with that username or password</p>
     <p> <a href="/glucocheck/signin.php">Sign in</a></p>
