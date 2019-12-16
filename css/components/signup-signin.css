@@ -1,4 +1,5 @@
 .signIn-up-container {
+    padding-top: 80px;
     max-width: 86%;
     display:grid;
     grid-template-columns: 1fr 1fr;

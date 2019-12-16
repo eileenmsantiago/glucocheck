@@ -1,49 +1,10 @@
-const days = [
-    {
-        date: 'Oct-06',
-        bgLevel: 6
-    },
-    {
-        date: 'Oct-07',
-        bgLevel: 9
-    },
-    {
-        date: 'Oct-08',
-        bgLevel: 11
-    },
-    {
-        date: 'Oct-09',
-        bgLevel: 12
-    },
-    {
-        date: 'Oct-10',
-        bgLevel: 12
-    },
-    {
-        date: 'Oct-11',
-        bgLevel: 12
-    },
-    {
-        date: 'Oct-12',
-        bgLevel: 12
-    }
-];
-
-var headRow = document.getElementById('head-row');
-var bgRow = document.getElementById('bg-row');
-
-for(var i=0; i < days.length; i++){
-
-    // date 
-    var dateTd = document.createElement('td');
-    dateTd.innerHTML = days[i].date;
-    headRow.appendChild(dateTd);
-
-    var bgTd = document.createElement('td');
-    bgTd.innerHTML = days[i].bgLevel;
-    bgRow.appendChild(bgTd);
+function sortBgDataByDate(data) {
+    return data.sort(function(a, b) {
+        a = new Date(a.date);
+        b = new Date(b.date);
+        return a<b ? -1 : a>b ? 1 : 0;
+    })
 }
-
 // Dynamically obtain data via AJAX and GET method from db 
 function getBgData() {
 
@@ -54,6 +15,7 @@ function getBgData() {
             var data = JSON.parse(xhr.responseText);
             if(data){
                 renderEntries(data);
+                renderGraph(data);
                 console.log(data);
             } else {
 
@@ -67,14 +29,62 @@ function getBgData() {
     return false;
 }
 
-// BG = {
-    // beforeAfter: "before"
-    // date: "2019-12-13"
-    // id: 2
-    // level: 5
-    // statusColor: "green"
-    // time: "12:00:00"
-// }
+function renderGraph(data) {
+
+    var headRow = document.getElementById('head-row');
+    var bgRow = document.getElementById('bg-row');
+
+    let avgMap = {};
+
+    data.forEach(bg => {
+        if(!avgMap[bg.date]) {
+            avgMap[bg.date] = bg.level;
+        } else {
+            avgMap[bg.date] = (avgMap[bg.date] + bg.level) / 2;
+        }
+    });
+
+    let tableData = [];
+    for(var key in avgMap) {
+        tableData.push({
+            date: key,
+            level: avgMap[key]
+        })
+    }
+
+    tableData = sortBgDataByDate(tableData).map(row => {
+        var dateTd = document.createElement('td');
+        dateTd.innerHTML = row.date;
+        headRow.appendChild(dateTd);
+    
+        var bgTd = document.createElement('td');
+        bgTd.classList.add('bar-td')
+        bgTd.innerHTML = row.level;
+        
+        var bar = document.createElement('div');
+        bar.classList.add('daily-bar');
+
+        let barColor = '';
+        if(row.level >= 14) {
+            barColor = "red";
+        } else if (row.level < 14 && row.level >= 10 ) {
+            barColor = "yellow";
+        } else {
+            barColor = "green";
+        }
+        bar.classList.add(barColor);
+        bar.style.height = `${row.level * 12}px`;
+        bgTd.appendChild(bar);
+        
+        bgRow.appendChild(bgTd);
+
+        
+    })
+
+
+    console.log(tableData);
+
+}
 
 // add entry data into the Latest Entries Table
 function renderEntries(data) {
@@ -82,7 +92,7 @@ function renderEntries(data) {
 
     var bgBody = document.getElementById('bg-body');
     // sort through the data numerically
-    data = data.sort((a,b) => a.id - b.id);
+    data = sortBgDataByDate(data);
     let current, sum = 0, average, highest = 0, lowest = 100;
 
     for (var i = 0; i < data.length; i++) {

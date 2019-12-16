@@ -99,6 +99,7 @@
                             required><br>
                         <label for="contactQuestion">Question </label><br>
                         <input 
+                            class="question-input"
                             type="text" 
                             placeholder="What's your question?" 
                             name="contactQuestion" 

@@ -20,6 +20,7 @@
                 </div>
             </div>
             <div class="gc-container about-body-content-container">
+                <img src="/glucocheck/assets/doctor.svg"/>
                 <div class="body-content gc-container">
                     <div class="content-padding">
                         <h2 class="gc-heading">
@@ -32,8 +33,9 @@
                 </div>
                 <div class="body-content-right gc-container">
                     <div class="content-padding">
+                    <img src="/glucocheck/assets/graph.svg"/>
                         <p id="gc-para-header" style="text-align: right;">Data = power.</p>
-                        <p class="gc-text" style="text-align: right;">Research shows that tracking — and the awareness that comes with it — really works. Studies have found that people with diabetes who used apps — to record food, exercise, and other behavior -- had better long-term blood sugar control. </p>
+                        <p class="gc-text" style="text-align: right; padding-bottom: 100px;">Research shows that tracking — and the awareness that comes with it — really works. Studies have found that people with diabetes who used apps — to record food, exercise, and other behavior -- had better long-term blood sugar control. </p>
                     </div>
                 </div>
             </div>

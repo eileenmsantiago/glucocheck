@@ -4,6 +4,7 @@
 
 .form-label-container:not(:first-child) {
     margin-left: 20px;
+    margin-top: auto;
 }
 
 .form-label-container button {
@@ -77,3 +78,11 @@ td {
     background-color: #4ec48e;
 }
 
+.bar-td {
+    /* height: 500px; */
+}
+
+.daily-bar {
+    margin: 10px auto;
+    width: 10px;
+}

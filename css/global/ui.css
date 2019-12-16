@@ -172,6 +172,10 @@ input[type=text]:focus {
     background-color: #f6f6f6;
 }
 
+.question-input {
+    margin-bottom: 20px;
+}
+
 
 /* ============= RESPONSIVENESS ============= */
 

@@ -134,6 +134,7 @@
                 
             </section>
             <section class="dashboard-container dashboard--graph">
+                <h2 class="gc-header">Daily Averages</h2>
                 <div class="bg-graph--container">
                     <table id="data-table--graph">
                         <thead>
