@@ -78,11 +78,38 @@ td {
     background-color: #4ec48e;
 }
 
-.bar-td {
-    /* height: 500px; */
-}
-
 .daily-bar {
     margin: 10px auto;
     width: 10px;
+}
+
+/* ============ Responsive ============ */
+
+@media only screen and (max-width: 600px) {
+
+    form > div {
+        margin: 0 0 15px 0; 
+    }
+    form > div > label{
+        width: 100%;
+        float: none;
+        margin: 0 0 5px 0;
+    }
+    form > div > div {
+        width: 100%;
+        float: none;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    input[type=password],
+    textarea,
+    select {
+        width: 100%; 
+    }
+    .form-label-container {
+        float: none;
+        width: 100%;
+    }
+
 }

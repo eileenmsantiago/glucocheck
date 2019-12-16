@@ -77,12 +77,8 @@ function renderGraph(data) {
         bgTd.appendChild(bar);
         
         bgRow.appendChild(bgTd);
-
         
     })
-
-
-    console.log(tableData);
 
 }
 

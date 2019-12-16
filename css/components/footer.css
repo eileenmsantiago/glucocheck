@@ -4,7 +4,6 @@
     padding: 10px 0;
     box-sizing: border-box;
     background-color: #f6f6f6;
-    /* position: fixed; */
     bottom: 0;
     z-index: 100;
 }
@@ -62,9 +61,16 @@
 /* ========= MEDIA QUERY ========= */
 
 @media screen and (max-width: 991px) {
-    .container {
+    .footer-root-container {
         padding-left: 2rem;
         padding-right: 2rem;
 
+    }
+}
+@media screen and (max-width: 600px) {
+    .inner-footer {
+        display:grid;
+        grid-template-columns: 1fr;
+        text-align:center;
     }
 }

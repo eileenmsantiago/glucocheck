@@ -15,22 +15,21 @@
                 <ul class="footer-lists">
                     <li><a href="about.php">About Us</a></li>
                     <li><a href="contact.php">Contact Us</a></li>
-                    <li><a href="#.php">Private Policy</a></li>
                 </ul>
             </div>
             <div class="footer-product">
                 <h4 class="footer-header-h4">Product</h4>
                 <ul class="footer-lists">
-                    <li><a href="#">How We Work</a></li>
-                    <li><a href="#">Start Tracking</a></li>
+                    <li><a href="about.php">How We Work</a></li>
+                    <li><a href="signup.php">Start Tracking</a></li>
                 </ul>
             </div>
             <div class="footer-connect">
                 <h4 class="footer-header-h4">Connect</h4>
-                <ul class="footer-social-list">
+                <!-- <ul class="footer-social-list">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </ul>
+                </ul> -->
                 <ul class="footer-lists">
                     <li><a href="#">contact@glucocheck.ca</a></li>
                     <li><a href="#">+123 456 7890</a></li>
