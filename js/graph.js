@@ -81,6 +81,9 @@ function renderEntries(data) {
     // data = [bg, bg, bg, bg]
 
     var bgBody = document.getElementById('bg-body');
+    // sort through the data numerically
+    data = data.sort((a,b) => a.id - b.id);
+    let current, sum = 0, average, highest = 0, lowest = 100;
 
     for (var i = 0; i < data.length; i++) {
         const bg = data[i];
@@ -128,7 +131,35 @@ function renderEntries(data) {
         bgBody.appendChild(bgRow);
 
 
+        // add data to the 4 column boxes
+        var col = document.createElement('p');
+        col.classList.add('current-bg');
+        col.innerHTML = bg.level;
+
+        // Current BG
+        if(i === data.length - 1) {
+            current = bg.level;
+        }
+
+        sum = sum + bg.level;
+
+        // Highest BG
+        if(bg.level > highest) {
+            highest = bg.level;
+        }
+
+        // Lowest BG
+        if(bg.level < lowest) {
+            lowest = bg.level;
+        }
     }
+
+    average = sum / data.length;
+
+    document.getElementById('current-bg').innerHTML = `${current} mmol/L`;
+    document.getElementById('average-bg').innerHTML = `${average} mmol/L`;
+    document.getElementById('highest-bg').innerHTML = `${highest} mmol/L`;
+    document.getElementById('lowest-bg').innerHTML = `${lowest} mmol/L`;
 
 }
 

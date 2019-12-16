@@ -7,8 +7,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .gc-field {
@@ -116,9 +116,6 @@
     box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.16);
     transition-timing-function: ease-out; */
     /* transition: 0.50s; */
-
-
-
 
 .gc-col {
     margin-left: 1rem;

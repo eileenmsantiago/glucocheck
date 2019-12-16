@@ -1,6 +1,5 @@
 <?php 
     include("isLoggedIn.php");
-    include("isUser.php");
 ?>
 <header> 
     <nav class="gc-container">

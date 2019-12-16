@@ -1,11 +1,13 @@
 <?php 
 
     // dashboard.php
-
+    session_start();
     include("../include/connect.php");
+
+    $userID = $_SESSION['id'];
     
     // Receives the blood glucose levels ('level') from the 'bg' table
-    $bgStmt = $pdo->prepare("SELECT * FROM `bg`;");
+    $bgStmt = $pdo->prepare("SELECT * FROM `bg` WHERE `userID` = '$userID'");
     $bgStmt->execute();
 
     $bgDataList = array();

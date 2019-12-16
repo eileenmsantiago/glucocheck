@@ -1,12 +1,19 @@
 <?php
-    $id = $_GET['id'];
 
     include("../include/connect.php");
+    include("include/isLoggedIn.php");
     
-    $stmt = $pdo->prepare("DELETE FROM `bg`
+    $id = $_GET['id'];
+
+    if(!$isLoggedIn) {
+        header("Location:/glucocheck/index.php");
+    } else {
+
+        $stmt = $pdo->prepare("DELETE FROM `bg`
         WHERE `bg`.`id` = $id;");
 
-    $stmt->execute();
+        $stmt->execute();
 
-    header("Location:/glucocheck/dashboard.php");
+        header("Location:/glucocheck/dashboard.php");
+    }
 ?>

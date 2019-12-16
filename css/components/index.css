@@ -24,15 +24,16 @@
     padding-bottom: 2rem;
 }
 
-.gc-container-full .gc-container-form-center{ 
+.gc-container-full, .gc-container-form-center{ 
     display: flex;
     flex-direction: row;
     margin: auto;
 }
-.gc-container-three-cards .gc-container-two-full {
+.gc-container-three-cards, .gc-container-two-full {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
 }
 
@@ -44,7 +45,6 @@
 }
 
 .gc-header, .gc-p {
-    /* padding-top: 1.5rem; */
     padding-bottom: 3rem;
     text-align: center;
 }
@@ -64,9 +64,6 @@
 .card-container-element h4{
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-.gc-container-two-full {
-
 }
 
 /* ========= Register Section ========= */

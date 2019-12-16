@@ -1,9 +1,9 @@
 <?php session_start();
 
-    include("include/isUser.php");
+    include("include/isLoggedIn.php");
     include("include/connect.php");
-
-    if($isUser) {
+    $bgID = $_GET["id"];
+    if($isLoggedIn) {
 
         $bgData = array(
             "level" => "",
@@ -12,32 +12,15 @@
             "date" => "",
         );
 
-        $bgID = $_GET["id"];
-        $bgData = $pdo->prepare("SELECT * FROM `bg` WHERE `id` = '$id';");
+        $bgData = $pdo->prepare("SELECT * FROM `bg` WHERE `id` = '$bgID';");
         $bgData->execute();
         $row = $bgData->fetch();
 
-        $bgData['level'] = $row['level'];
-        $bgData['beforeAfter'] = $row['beforeAfter'];
-        $bgData['time'] = $row['time'];
-        $bgData['date'] = $row['date'];
-    
-        $userData = array();
-        while($row = $bgData->fetch()) {
-            $level = $row["level"];
-            if($level >= 14) {
-                $row["statusColor"] = "red";
-            } else if ($level < 14 && $level >= 10 ) {
-                $row["statusColor"] = "yellow";
-            } else {
-                $row["statusColor"] = "green";
-            }
-            $userBg[] = $row;
+        if(!$row) {
+            header("Location:/glucocheck/dashboard.php");
         }
-
-        if(!$bgData) {
-            header("Location:/glucocheck/index.php");
-        }
+    } else {
+        header("Location:/glucocheck/index.php");
     }
 ?>
 
@@ -59,7 +42,7 @@
             <section class="dashboard-container dashboard--entry-form">
                 <div class="form-content-wrapper">
                     <form 
-                        action="handlers/addBgEntry.php" 
+                        action="handlers/updateBG.php" 
                         method="POST"
                         enctype="multipart/form-data"
                         id="bg-form">
@@ -69,6 +52,7 @@
                                 type="text" 
                                 placeholder="Enter a numeric value" 
                                 name="level" 
+                                value="<?php echo $row["level"]?>"
                                 required>
                         </div>
                         <div class="form-label-container">
@@ -84,7 +68,8 @@
                             <input 
                                 type="text" 
                                 placeholder="00:00:00" 
-                                name="time">
+                                name="time"
+                                value="<?php echo $row["time"]?>">
                         </div>          
                         <div class="form-label-container">
                             <label class="gc-label-header" for="date">Date </label><br>
@@ -92,10 +77,14 @@
                                 class="input-bottom"
                                 type="date" 
                                 placeholder="YYYY MM DD" 
-                                name="date">
+                                name="date"
+                                value="<?php echo $row["date"]?>">
                         </div>
                         <div class="form-label-container">        
                             <button type="submit" id="submit" class="gc-button gc-button-type-secondary">Submit</button>
+                        </div>
+                        <div class="form-label-container">
+					        <a href="<?php echo("handlers/deleteBG.php?id=$bgID");?>">Delete</a>
                         </div>
                     </form>
                 </div>

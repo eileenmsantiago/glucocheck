@@ -1,6 +1,5 @@
 <?php session_start();
     
-    include("include/isUser.php");
     include("include/isLoggedIn.php");
     include("include/connect.php");
     
@@ -114,34 +113,28 @@
             <section class="dashboard--4-col">
                 <div class="dashboard-container bg--col" id="currentBg">
                     <h3 class="gc-header">Current BG</h3>
-                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <p id="current-bg" class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
                     <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="averageBg">
                     <h3 class="gc-header">Average BG</h3>
-                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <p id="average-bg" class="bg-level--p"> mmol/L</p>
                     <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="highestBg">
                     <h3 class="gc-header">Highest BG</h3>
-                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <p id="highest-bg" class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
                     <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 <div class="dashboard-container bg--col" id="lowestBg">
                     <h3 class="gc-header">Lowest BG</h3>
-                    <p class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
+                    <p id="lowest-bg" class="bg-level--p"><?php echo $row ["level"]; ?> mmol/L</p>
                     <div class="level-circle <?php echo $row ['statusColor']?>"></div>
                 </div>
                 
             </section>
             <section class="dashboard-container dashboard--graph">
-                <div class="graph-range--container">
-
-                </div>
                 <div class="bg-graph--container">
-                    <table id="data-table--graph">
-
-                    </table>
                     <table id="data-table--graph">
                         <thead>
                             <tr id="head-row">
@@ -149,10 +142,6 @@
                         </thead>
                         <tbody>
                             <tr id="bg-row">
-                                <!-- <th scope="row">6</th>
-                                <th scope="row">9</th>
-                                <th scope="row">11</th>
-                                <th scope="row">12</th> -->
                             </tr>
                         </tbody>
                     </table>
